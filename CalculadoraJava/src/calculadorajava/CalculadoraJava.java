@@ -31,16 +31,38 @@ public class CalculadoraJava {
 
     public void escolha() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("1 - soma");
-        System.out.println("2 - subtracao");
-        System.out.println("3 - multiplicao");
-        System.out.println("4 - divisao");
-        int opcao = scan.nextInt();
-        
-        switch(opcao){
-            case 1:
+        System.out.println("+ soma");
+        System.out.println("- subtracao");
+        System.out.println("* multiplicao");
+        System.out.println("/ divisao");
+        String opcao = scan.next();
+
+        switch (opcao) {
+            case "+":
                 System.out.println("");
-                System.out.println("A soma é: "+soma(scan.nextInt(), scan.nextInt()));
+                System.out.println("Soma");
+                System.out.println("A soma é: " + soma(scan.nextInt(), scan.nextInt()));
+                break;
+            case "-":
+                System.out.println("");
+                System.out.println("Subtracao");
+
+                System.out.println("A subtracao é: " + subtracao(scan.nextInt(), scan.nextInt()));
+                break;
+            case "*":
+                System.out.println("");
+                System.out.println("multiplicao");
+
+                System.out.println("A multiplicao é: " + multiplicao(scan.nextInt(), scan.nextInt()));
+                break;
+            case "/":
+                System.out.println("");
+                System.out.println("divisao");
+
+                System.out.println("A divisao é: " + divisao(scan.nextInt(), scan.nextInt()));
+                break;
+            default:
+                System.out.println("Opção inválida");
         }
 
     }
